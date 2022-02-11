@@ -38,3 +38,16 @@ echo "<br><br> 12. Power <br><br>";
 echo 8**2;
 
 
+// 13. Assignment operators
+echo "<br><br> 13. Assignment operators <br><br>";
+$my_num = 31;
+$answer = $my_num;
+$answer +=2;
+$answer *=2;
+$answer -=2;
+$answer /=2;
+$answer -=$my_num;
+echo $answer."<br>";
+
+
+
