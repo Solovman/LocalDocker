@@ -21,3 +21,12 @@ echo ($BadNumber + $NegativeNumber)."<br>";
 $last_month = 1187.23;
 $this_month = 1089.98;
 echo ($last_month - $this_month)."<br>";
+
+// 11. Multiplication and division
+echo "<br><br> 11. Multiplication and division <br><br>";
+$num_languages = 4;
+$months = 11;
+$days = 16;
+$days_per_language = ($days * $months)/$num_languages;
+echo $days_per_language."<br>";
+
