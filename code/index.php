@@ -336,5 +336,36 @@ for ($i = 1; $i <= 20; $i++)
 echo "<br>";
 
 
+//20. Function combination
+echo "<br><br> 20. Function Combinations <br><br>";
+
+//20.1
+$array14 = [5,8,7,13,7,6,77,21,2];
+echo array_sum($array14)/sizeof($array14)."<br>";
+
+//20.2
+echo array_sum(range(1, 100))."<br>";
+
+//20.3
+$array15 = [100,64,4,49];
+print_r(array_map('sqrt', $array15));
+echo "<br>";
+
+//20.4
+$vals = range(1,26);
+$keys = range('a', 'z');
+$array16= array_combine($keys, $vals);
+echo "<br>";
+print_r($array16);
+echo "<br>";
+echo "<br>";
+
+//20.5
+$numbers = '1234567890';
+$array17 = str_split($numbers, 2);
+$new_result = array_sum($array17);
+echo $new_result;
+
+
 
 
