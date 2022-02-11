@@ -198,6 +198,82 @@ foreach ($array6 as $value) {
 }
 
 
+//17. Arrays
+echo "<br><br> 17. Arrays <br><br>";
+
+//17.1
+$array7=[];
+for ($i = 1; $i < 11; $i++)
+{
+    $array7[$i-1]='';
+    for ($j = 0; $j < $i; $j++)
+        $array7[$i-1].='x';
+}
+print_r($array7);
+
+//17.2
+function arrayFill($value, int $number)
+{
+    $array8 = [];
+    for ($i = 1; $i <= $number; $i++) {
+        $array8[$i - 1] = '';
+        for ($j = 0; $j < $i; $j++)
+            $array8[$i - 1] .= $value;
+    }
+    return $array8;
+}
+echo "<br>";
+echo "<br>";
+print_r(arrayFill('x',5));
+echo "<br>";
+
+//17.3
+$sum = 0;
+$array9 = [[1,2,3],[4,5],[6]];
+
+foreach ($array9 as $value)
+{
+    foreach ($value as $number)
+    {
+        $sum += $number;
+    }
+}
+echo "<br>".$sum."<br>";
+echo "<br>";
+
+//17.4
+$array10 = [];
+$counter = 1;
+for($i = 0; $i < 3; $i++)
+    for($j = 0; $j < 3; $j++)
+        $array10[$i][$j] = $counter++;
+print_r($array10);
+echo "<br>";
+
+//17.5
+$array11=[2,5,3,9];
+$result = $array11[0] * $array11[1] + $array11[2] * $array11[3];
+echo "<br>".$result."<br>";
+echo "<br>";
+
+//17.6
+$user = ['name' => 'Ilya', 'surname' => 'Solovev', 'patronymic' => 'Andreevich', 31, 01, 2002];
+echo $user['surname']." ".$user['name']." ".$user['patronymic']."<br>";
+echo "<br>";
+
+//17.7
+$date = ['year' => 2022, 'month' => '02', 'day' => '11'];
+echo "{$date['year']}-{$date['month']}-{$date['day']}<br>";
+echo "<br>";
+
+//17.8
+$array12 = ['a', 'b', 'c', 'd', 'e'];
+echo sizeof($array12)."<br>";
+echo "<br>";
+
+//17.9
+echo $array12[sizeof($array12)-1]."<br>";
+echo $array12[sizeof($array12)-2]."<br>";
 
 
 
