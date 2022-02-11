@@ -124,6 +124,7 @@ foreach ($array4 as $value) {
     }
 }
 
+
 // 15. Functions
 echo "<br><br> 15. Functions <br><br>";
 
@@ -135,6 +136,67 @@ function printStringReturnNumber(string $string):int
 
 $my_num = printStringReturnNumber('Devil number');
 echo $my_num;
+
+
+// 16. Functions
+echo "<br><br> 16. Funtions 2 <br><br>";
+
+//16.1
+function increaseEnthusiasm(string $string):string
+{
+    $string.='!';
+    return $string;
+}
+
+//16.2
+echo increaseEnthusiasm('Hello, world')."<br>";
+
+//16.3
+function repeatThreeTimes(string $string):string
+{
+    $string.=$string.$string;
+    return $string;
+}
+
+//16.4
+echo repeatThreeTimes(increaseEnthusiasm('Hello, world'))."<br>";
+
+//16.5
+function cut(string $string, int $int=10):string
+{
+    $return = "";
+    for($i = 0; $i < $int; $i++)
+        $return.=$string[$i];
+    return $return;
+}
+
+//16.6
+echo cut("string example",6)."<br>";
+
+//16.7
+function arrayFilling($array, $number)
+{
+    if ($number < sizeof($array))
+    {
+        echo $array[$number]." ";
+        arrayFilling($array, $number+1);
+    }
+}
+$array5 = array(9, 8, 7, 6, 5, 4, 3, 2, 1, 0);
+arrayFilling($array5, 0);
+
+//16.8
+$sum = 0;
+$array6 = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+foreach ($array6 as $value) {
+    $sum += $value;
+    if ($sum > 10)
+    {
+        echo "<br>".$value. "<br>";
+        break;
+    }
+}
+
 
 
 
