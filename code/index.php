@@ -14,7 +14,7 @@ echo "<br><br> 2. Digits <br><br>";
 $BadNumber = 13;
 echo $BadNumber."<br>";
 $NegativeNumber = -1;
-echo $myAge."<br>";
+echo $NegativeNumber."<br>";
 $FractionalNumber = 13.37;
 echo $FractionalNumber. "<br>";
 echo ($BadNumber + $NegativeNumber)."<br>";
