@@ -124,6 +124,18 @@ foreach ($array4 as $value) {
     }
 }
 
+// 15. Functions
+echo "<br><br> 15. Functions <br><br>";
+
+function printStringReturnNumber(string $string):int
+{
+    echo $string."<br>";
+    return 666;
+}
+
+$my_num = printStringReturnNumber('Devil number');
+echo $my_num;
+
 
 
 
