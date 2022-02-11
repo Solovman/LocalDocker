@@ -322,6 +322,18 @@ echo "<br>";
 $array13 = [1,2,3];
 $sum = array_sum($array13);
 echo (sizeof($array13) == 3) ? "{$sum}<br>": "В массиве не 3 элемента";
+echo "<br>";
+
+// 19. Cycles
+echo "<br><br> 19. Cycles <br><br>";
+
+for ($i = 1; $i <= 20; $i++)
+{
+    for ($j = 1; $j <= $i; $j++)
+        echo "x";
+    echo "<br>";
+}
+echo "<br>";
 
 
 
