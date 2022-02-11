@@ -276,5 +276,53 @@ echo $array12[sizeof($array12)-1]."<br>";
 echo $array12[sizeof($array12)-2]."<br>";
 
 
+// 18. if-else construct
+echo "<br><br> 18. if/else Construction <br><br>";
+
+//18.1
+function MoreOrLessThan10(int $a, int $b):bool
+{
+    if ($a+$b > 10) return true;
+    else return false;
+}
+if (MoreOrLessThan10(2, 9));
+
+//18.2
+function EqualityOfNumbers(int $a, int $b):bool
+{
+    if ($a == $b ) return true;
+    else return false;
+}
+if (EqualityOfNumbers(21,21)) echo "The numbers are equal";
+echo "<br>";
+
+//18.3
+$test = 0;
+echo ($test == 0) ? 'Верно!<br>' : 'Ложно!<br>';
+echo "<br>";
+
+//18.4
+$age = rand(0, 150);
+echo "age = {$age}<br>";
+if ($age < 10) echo "{$age} < 10<br>";
+else if ($age > 99) echo "{$age} > 99<br>";
+else
+{
+    $sum = 0;
+    for ($i = 0; $i < strlen($age); $i++)
+    {
+        $sum += $age%10;
+        $age/=10;
+    }
+    echo ($sum > 9) ? "сумма цифр двузначная<br>" : "сумма цифр однозначна<br>";
+}
+echo "<br>";
+
+//18.5
+$array13 = [1,2,3];
+$sum = array_sum($array13);
+echo (sizeof($array13) == 3) ? "{$sum}<br>": "В массиве не 3 элемента";
+
+
 
 
