@@ -1,4 +1,21 @@
 <?php
+
+/* Laboratory work 3: Regular expressions and file manipulation */ 
+
+//1.Regular expressions
+
+/* a) Напишите регулярку, которая найдет строки 'abba', 'adca','abea' по шаблону:буква'a',два
+ любыхсимвола,буква'b'.Пример строки:$str='ahb acb aeb aeeb adcb axeb'; */
+echo '1.Regular expressions<br>';
+$regular_expressions = '/a.{2}b/';
+$str='ahb acb aeb aeeb adcb axeb';
+$matches = [];
+$count = preg_match_all($regular_expressions, $str, $matches);
+print_r($matches);
+
+
+/*Laboratory work 2: PHP */
+
 /* Imagine a lot of code here */
 $very_bad_unclear_name="15 chicken wings";
 
