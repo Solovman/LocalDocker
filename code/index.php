@@ -16,6 +16,7 @@ print_r($matches);
 echo "<br>";
 echo "<br>";
 
+
 /* b) Дана строка с целыми числами 'a1b2c3'. С помощью регулярки преобразуйте строку так,
  чтобы вместо этих чисел стояли их кубы. */
 $regular_expressions = "/(\d)+/";
@@ -65,4 +66,28 @@ if ($_POST['getWordsAndSyms'])
     }
 }
 echo $_SESSION['textInfo'];
+
+/* b.На одной странице с помощью формы спросите упользователя фамилию, имя и возраст.
+Запишите эти данныев сессию. При заходе на другую страницу выведите этиданные на экран. */
+?>
+<body>
+<form method="POST">
+    <label>
+        NAME<input type="text" name="name" required><br>
+        SURNAME<input type="text" name="surname" required><br>
+        AGE<input type="number" name="age" required><br>
+        <input type="submit" value="Записать в сессию" name="sendToSession">
+    </label>
+</form>
+<a href="/UserInformation.php">User Information</a>
+</body>
+<?php
+if ($_POST['sendToSession']) {
+    if ($_POST['name'] && $_POST['surname'] && $_POST['age']) {
+        $_SESSION['name'] = $_POST['name'];
+        $_SESSION['surname'] = $_POST['surname'];
+        $_SESSION['age'] = $_POST['age'];
+    }
+}
+?>
 
