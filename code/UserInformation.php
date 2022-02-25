@@ -17,4 +17,4 @@ AGE: {$_SESSION['age']}<br>";
 <body>
 <a href="index.php">НАЗАД</a>
 </body>
-</html> 
+</html>
