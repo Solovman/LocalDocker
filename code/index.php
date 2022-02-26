@@ -123,5 +123,8 @@ if ($_POST['sendToSessionArray']) {
         );
     }
 }
+echo "<br>";
+echo "<br>";
 ?>
 
+<a href="/bulletinBoard.php">On the Bulletin Board</a>
