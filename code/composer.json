@@ -1,0 +1,13 @@
+{
+    "name": "jhosh/code",
+    "authors": [
+        {
+            "name": "Solovman",
+            "email": "isolomen@mail.ru"
+        }
+    ],
+    "require": {
+        "google/apiclient": "2.0",
+        "guzzlehttp/guzzle": "~5.3.1"
+    }
+}
